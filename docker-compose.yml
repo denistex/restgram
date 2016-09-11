@@ -1,10 +1,10 @@
 restgram:
-    build: .
-    command: node_modules/.bin/nodemon main.js
-    environment:
-        NODE_ENV: development
-    ports:
-        - '3000:3000'
-    volumes:
-        - .:/home/restgram/data
-        - /home/restgram/data/node_modules
+  build: .
+  command: node_modules/.bin/nodemon main.js
+  environment:
+    NODE_ENV: development
+  ports:
+    - '3000:3000'
+  volumes:
+    - .:/home/restgram/data
+    - /home/restgram/data/node_modules

@@ -4,11 +4,11 @@
 FROM node
 
 RUN useradd --user-group --create-home --shell /bin/false restgram \
-	# https://github.com/npm/npm/issues/9863
-	#&& npm install --global npm
-	#&& npm install --production \
-	#&& mv ./node_modules ./node_modules.tmp && mv ./node_modules.tmp ./node_modules && npm install
-	&& curl -L https://npmjs.org/install.sh | sh
+  # https://github.com/npm/npm/issues/9863
+  #&& npm install --global npm
+  #&& npm install --production \
+  #&& mv ./node_modules ./node_modules.tmp && mv ./node_modules.tmp ./node_modules && npm install
+  && curl -L https://npmjs.org/install.sh | sh
 
 ENV HOME=/home/restgram
 
@@ -18,7 +18,7 @@ RUN chown -R restgram:restgram $HOME/*
 USER restgram
 WORKDIR $HOME/data
 RUN npm install \
-	&& npm cache clean
+  && npm cache clean
 
 USER root
 COPY . $HOME/data
