@@ -10,7 +10,9 @@
   "author": "Denis T <job@denis-it.com> (http://denis-it.com/)",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^1.10.2"
+    "nodemon": "^1.10.2",
+    "standard": "^8.0.0",
+    "standard-format": "^2.2.3"
   },
   "dependencies": {
     "winston": "^2.2.0"
