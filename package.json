@@ -11,5 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^1.10.2"
+  },
+  "dependencies": {
+    "winston": "^2.2.0"
   }
 }
