@@ -1,15 +1,18 @@
-var http = require('http')
-
+const express = require('express')
 const log = require('./lib/logging')
+const client = require('./lib/client')
 
-var server = http.createServer(function (req, res) {
-  console.log('Starting request processing')
-  res.writeHead(200, {
-    'Content-Type': 'text/plain; charset=UTF-8'
-  })
-  res.end('Hello world!')
+const app = express()
+
+app.get('/get_user_id_by_phone', (req, res) => {
+  res.send('Not implemented yet.')
 })
 
-server.listen(3000, function () {
-  log.info('listening on *:3000')
+app.get('/set_auth_code', (req, res) => {
+  client.signIn(req.query.code)
+    .then(() => res.send('ok'))
+})
+
+app.listen(3000, () => {
+  log.debug('listening on *:3000')
 })

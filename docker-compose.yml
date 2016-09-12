@@ -3,6 +3,10 @@ restgram:
   command: node_modules/.bin/nodemon main.js
   environment:
     NODE_ENV: development
+    LOG_LEVEL: silly
+    PHONE: ''
+    API_ID: ''
+    API_HASH: ''
   ports:
     - '3000:3000'
   volumes:
