@@ -17,6 +17,13 @@ app.get('/sign_in', (req, res) => {
 app.get('/get_contacts', (req, res) => {
   client.getContacts()
     .then(contacts => res.send(JSON.stringify(contacts)))
+    .catch(error => res.send(JSON.stringify(error)))
+})
+
+app.get('/check_phone', (req, res) => {
+  client.checkPhone(req.query.phone)
+    .then(result => res.send(JSON.stringify(result)))
+    .catch(error => res.send(JSON.stringify(error)))
 })
 
 app.get('/import_contact', (req, res) => {
@@ -27,6 +34,7 @@ app.get('/import_contact', (req, res) => {
     last_name: 'last_name'
   }], false)
     .then(imported => res.send(JSON.stringify(imported)))
+    .catch(error => res.send(JSON.stringify(error)))
 })
 
 app.listen(3000, () => {
