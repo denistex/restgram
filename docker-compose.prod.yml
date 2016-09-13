@@ -2,5 +2,6 @@ restgram:
   build: .
   environment:
     NODE_ENV: production
+    AUTH_DATA: ../authdata.json
   ports:
     - '3000:3000'

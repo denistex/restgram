@@ -4,6 +4,7 @@ restgram:
   environment:
     NODE_ENV: development
     LOG_LEVEL: silly
+    AUTH_DATA: ../authdata.json
     PHONE: ''
     API_ID: ''
     API_HASH: ''

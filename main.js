@@ -8,9 +8,10 @@ app.get('/get_user_id_by_phone', (req, res) => {
   res.send('not implemented yet')
 })
 
-app.get('/set_auth_code', (req, res) => {
+app.get('/sign_in', (req, res) => {
   client.signIn(req.query.code)
     .then(() => res.send('ok'))
+    .catch(() => res.send('error'))
 })
 
 app.get('/get_contacts', (req, res) => {
