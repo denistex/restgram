@@ -17,7 +17,7 @@
   "dependencies": {
     "clone": "^1.0.2",
     "express": "^4.14.0",
-    "telegram.link": "^0.6.4",
+    "telegram.link": "git+https://github.com/denis-it/telegram.link.git",
     "winston": "^2.2.0"
   }
 }
