@@ -20,6 +20,12 @@ app.get('/get_contacts', (req, res) => {
     .catch(error => res.send(JSON.stringify(error)))
 })
 
+app.get('/get_full_user', (req, res) => {
+  client.getFullUser(req.query.user_id)
+    .then(user => res.send(JSON.stringify(user)))
+    .catch(error => res.send(JSON.stringify(error)))
+})
+
 app.get('/check_phone', (req, res) => {
   client.checkPhone(req.query.phone)
     .then(result => res.send(JSON.stringify(result)))
