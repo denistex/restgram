@@ -3,7 +3,7 @@ const log = require('./lib/logging')
 const client = require('./lib/client')
 
 function getState (info) {
-    return '[' + Math.floor(Math.random() * 1000) + '] ' + info + ' | '
+  return '[' + Math.floor(Math.random() * 1000) + '] ' + info + ' | '
 }
 
 function processError (res, state, error) {
