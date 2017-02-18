@@ -3,7 +3,8 @@
 
 FROM node
 
-RUN useradd --user-group --create-home --shell /bin/false restgram \
+RUN userdel -r node \
+  && useradd --user-group --create-home --shell /bin/false restgram \
   # https://github.com/npm/npm/issues/9863
   #&& npm install --global npm
   #&& npm install --production \
